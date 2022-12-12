@@ -1,0 +1,5 @@
+C:\MS4W\ms4w\Apache\htdocs\PlanSierra
+C:\MS4W\ms4w\Apache\conf
+http://sit.plansierra.org:81/
+
+.\certbot.exe --manual --preferred-challenges dns certonly -d sit.plansierra.org:81

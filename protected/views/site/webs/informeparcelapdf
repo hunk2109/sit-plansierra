@@ -1,0 +1,92 @@
+<?php 
+/** Error reporting */
+
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+date_default_timezone_set('Europe/London');
+
+//$conn = pg_connect("host='localhost' port='5432' user='web' password='web' dbname='iberpotash2'");
+
+require_once 'c:\\MS4W/ms4w/Apache/htdocs/PlanSierra/PHPExcel_1.8.0/Classes/PHPExcel.php';
+
+//
+$incrementoC = 20;
+$inputFileName = "c:\\datos/salidas/plantillas/Parcela_v00.xlsx";
+$inputFileType = PHPExcel_IOFactory::identify($inputFileName);
+$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+
+
+$objReader->setIncludeCharts(TRUE);
+$objPHPExcel = $objReader->load($inputFileName);
+$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+
+$conn = pg_connect("host='localhost' port='5432' user='postgres' password='postgres' dbname='jbsoft_dev'");
+
+		
+	/*$SQL= "SELECT 
+
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_plantacion,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_control,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_cliente,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".apellido,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".nombre,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".cedula,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".nombre_cuenca,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".nombre_microcuenca,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".cs_destino,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".fecha::date,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".plantas,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".tareas,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".inversion_plantas,
+			fac_labores_codigo_factura.coste_labores,
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_factura
+			
+		FROM 
+			public.\"15_Plantacion_completa_sin_geo_facturas_plus\" left join 
+			public.fac_labores_codigo_factura
+		on
+			\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_factura = fac_labores_codigo_factura.codigo_factura
+	WHERE 
+			".$_GET['criterio']."
+ORDER BY \"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_plantacion::int,\"15_Plantacion_completa_sin_geo_facturas_plus\".codigo_factura::int;";
+		*/
+
+/*$result  = pg_query($conn, $SQL);
+//$row = pg_fetch_array($result);
+$m=2;
+$k=1;
+$objWorksheet = $objPHPExcel->setActiveSheetIndex($k);
+
+while ($row = pg_fetch_array($result)){
+	
+	$objPHPExcel->getActiveSheet()->setCellValue("A".$m, $m-1);
+	$objPHPExcel->getActiveSheet()->setCellValue("B".$m, $row[0]);
+	$objPHPExcel->getActiveSheet()->setCellValue("C".$m, $row[1]);
+	$objPHPExcel->getActiveSheet()->setCellValue("D".$m, $row[2]);
+	$objPHPExcel->getActiveSheet()->setCellValue("E".$m, $row[3]);
+	$objPHPExcel->getActiveSheet()->setCellValue("F".$m, $row[4]);
+	$objPHPExcel->getActiveSheet()->setCellValue("G".$m, $row[5]);
+	$objPHPExcel->getActiveSheet()->setCellValue("H".$m, $row[6]);
+	$objPHPExcel->getActiveSheet()->setCellValue("I".$m, $row[7]);
+	$objPHPExcel->getActiveSheet()->setCellValue("J".$m, $row[8]);
+	$objPHPExcel->getActiveSheet()->setCellValue("K".$m, $row[9]);
+	$objPHPExcel->getActiveSheet()->setCellValue("L".$m, $row[10]);
+	$objPHPExcel->getActiveSheet()->setCellValue("M".$m, $row[11]);
+	$objPHPExcel->getActiveSheet()->setCellValue("N".$m, $row[12]);
+	$objPHPExcel->getActiveSheet()->setCellValue("O".$m, $row[13]);
+	$objPHPExcel->getActiveSheet()->setCellValue("P".$m, $row[14]);
+	$m=$m+1;
+}	
+*/
+
+$objPHPExcel->getActiveSheet()->setCellValue("A".$m, $parcela)
+header('Content-Type: application/vnd.ms-excel');
+header('Content-Disposition: attachment;filename="Facturas.xlsx"');
+header('Cache-Control: max-age=0');
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+$objWriter->setIncludeCharts(TRUE);
+$objWriter->save('php://output');
+
+?>	
+	

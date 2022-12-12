@@ -1,0 +1,34 @@
+ SELECT poa_macadamia.ano,
+    poa_macadamia.superficiemac AS suma,
+    0 AS cuenca,
+    0 AS microcuenca,
+    'superficemac'::text AS descripcion
+   FROM poa_macadamia
+UNION
+  SELECT poa_macadamia.ano,
+    poa_macadamia.cantidad_produ AS suma,
+    0 AS cuenca,
+    0 AS microcuenca,
+    'cantidad_produ'::text AS descripcion
+   FROM poa_macadamia
+UNION
+SELECT poa_macadamia.ano,
+    poa_macadamia.charlas AS suma,
+    0 AS cuenca,
+    0 AS microcuenca,
+    'charlas'::text AS descripcion
+   FROM poa_macadamia
+UNION
+SELECT poa_macadamia.ano,
+    poa_macadamia.diascampo AS suma,
+    0 AS cuenca,
+    0 AS microcuenca,
+    'diascampo'::text AS descripcion
+   FROM poa_macadamia
+UNIO
+SELECT poa_macadamia.ano,
+    poa_macadamia.capacitacion AS suma,
+    0 AS cuenca,
+    0 AS microcuenca,
+    'capacitacion'::text AS descripcion
+   FROM poa_macadamia
