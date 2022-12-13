@@ -32,7 +32,7 @@
 <div class="pane ui-layout-west">
 	<div>
 	
-	<label>VISOR GENERAL
+	<label>VISOR GENERAL prueba
 	
 		<br/>
 		<br/>

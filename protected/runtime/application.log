@@ -8710,3 +8710,368 @@ Stack trace:
 REQUEST_URI=/index.php?r=tblEtiqueta/getAll
 HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
 ---
+2022/12/13 15:47:32 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 15:54:36 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/cuencas
+---
+2022/12/13 15:55:18 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/cuencas
+---
+2022/12/13 15:56:07 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/cuencas
+---
+2022/12/13 15:56:52 [error] [php] Invalid argument supplied for foreach() (C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\PoaController.php:1138)
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): PoaController->runAction()
+#3 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): PoaController->filterAccessControl()
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): PoaController->runActionWithFilters()
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): PoaController->run()
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php?r=Poa/GetActividadActividadSubcuencas&tipoactividad=0&tipoactividadsec=0&finicial=2000-01-01&ffinal=%272022-12-13%27
+2022/12/13 15:57:48 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('GetTecnicoActiv...')
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Poa/GetTecnicoA...')
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=Poa/GetTecnicoActividad
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/seguimiento
+---
+2022/12/13 15:57:55 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 16:00:04 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 18:55:51 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:03:42 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:12:30 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:23:21 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:24:56 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:33:47 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
+2022/12/13 19:33:54 [error] [php] Invalid argument supplied for foreach() (C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\PuntosController.php:184)
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): PuntosController->runAction()
+#3 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): PuntosController->filterAccessControl()
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): PuntosController->runActionWithFilters()
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): PuntosController->run()
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php?r=Puntos/GetPlantacionSeleccionBox&criterio2=
+2022/12/13 19:33:54 [error] [php] Invalid argument supplied for foreach() (C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\PoaController.php:4236)
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): PoaController->runAction()
+#3 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): PoaController->filterAccessControl()
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): PoaController->runActionWithFilters()
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): PoaController->run()
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php?r=Poa/GetActividadFacturacionLabores&criterio=
+2022/12/13 19:43:34 [error] [exception.CDbException] CDbException: The table "tbl_etiqueta" for active record class "TblEtiqueta" cannot be found in the database. in C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(TblEtiqueta))
+#1 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(403): CActiveRecord::model('TblEtiqueta')
+#2 C:\MS4W\ms4w\Apache\htdocs\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\protected\controllers\TblEtiquetaController.php(81): CActiveRecord->__construct()
+#4 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\actions\CInlineAction.php(50): TblEtiquetaController->actionGetAll()
+#5 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('getAll')
+#14 C:\MS4W\ms4w\Apache\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('tblEtiqueta/get...')
+#15 C:\MS4W\ms4w\Apache\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\MS4W\ms4w\Apache\htdocs\PlanSierra\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=tblEtiqueta/getAll
+HTTP_REFERER=http://sit.plansierra.org:81/index.php?r=site/visor2
+---
