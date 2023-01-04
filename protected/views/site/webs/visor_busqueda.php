@@ -10,7 +10,7 @@
 <script type="text/javascript" src="path/to/file/picker.min.js"></script>
 
 
-<!-- estaos tres enlaces los introduje para que SELECTPICKER tuviera tosas sus funciones 2919-09-15-->
+<!-- estaos tres enlaces los introduje para que SELECTPICKER tuviera tosas sus funciones 2019-09-15-->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
@@ -234,7 +234,7 @@ body {font-family: Arial;}
   <br/>
   <br/>
 		<div class="row">
-			<button type="button" class="btn btn-primay" title="Calcular" onclick="hacerBusqueda()">Buscar 
+			<button type="button" class="btn btn-primay" title="Calcular" onclick="hacerBusqueda()">Buscar  
 							<img width=22 src="images/concentricos.png" alt="Cacular"/>
 			</button>
 		</div>
@@ -251,7 +251,7 @@ body {font-family: Arial;}
 		</div>	
 		<div class="row">
 			<div class="row" >
-				<input type="checkbox"  id="checkmicrocuenca"  name="checkmicrocuenca" value= "1"><label>__Microcuenca</label>
+				<input type="checkbox"  id="checkmicrocuenca"  name="checkmicrocuenca" value= "1"><label> Microcuenca</label>
 			</div>
 			<div class="row" >
 				
@@ -1215,7 +1215,7 @@ var myExtent = [xmin,ymin,xmax,ymax];
 		//extent: extent,
 		id: 'Plantaciones seleccionadas',
 		visible: false,
-		name: "Plantaciones seleccionadas",
+		name: "Plantaciones",
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/especies.map&criterio2='+text3+'&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=PLANTACIONES_MULTICRITERIO',
 		
 		//http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/especies.map&parcelassel=99&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=PLANTACIONES_MULTICRITERIO',
@@ -1230,8 +1230,8 @@ var myExtent = [xmin,ymin,xmax,ymax];
 	 ips= new ol.layer.Image({
 	id:'IPS',
 	visible: false,
-	name:'IPS',
-	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/ips.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=IPS',
+	name:'Trampa IPS',
+	/*url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/ips.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=IPS',*/
 	source: new ol.source.ImageWMS({
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/ips.map',
 		crossorigin: 'anonymous',
@@ -1248,7 +1248,7 @@ var myExtent = [xmin,ymin,xmax,ymax];
     arg_cuencas= new ol.layer.Image({
 	id:'Subcuencas',
 	visible: false,
-	name:'Subcuencas',
+	name:'Microcuencas',
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/catastro.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=CUENCAS_SELECT2',
 	source: new ol.source.ImageWMS({
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/catastro.map',
@@ -1387,7 +1387,7 @@ tipoactividad=3;
 
 var mdt_srtm_sombreado = new ol.layer.Image({
 	id: 'mdt_srtm_sombreado',
-	name:'mdt_srtm_sombreado',
+	name:' Elevacion (msnm)',
 	opacity :'0.5',
 	
 	visible: false,
@@ -1430,7 +1430,7 @@ var mdt_srtm = new ol.layer.Image({
 
 var mdt_pendiente = new ol.layer.Image({
 	id:'mdt_pendiente',
-	name:'mdt_pendiente',
+	name:' Pendiente (%)',
 	visible: false,
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/raster.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=mdt_pendiente',
 	
@@ -1457,8 +1457,8 @@ var mdt_pendiente = new ol.layer.Image({
 
 plan_sierra = new ol.layer.Image({
 	id: 'Plan_Sierra',
-	name:'Plan_Sierra',
-	opacity :'1',
+	name:'Area de Intervension',
+	opacity :'100',
 	
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Plan_Sierra',
 	source: new ol.source.ImageWMS({
@@ -1467,13 +1467,39 @@ plan_sierra = new ol.layer.Image({
 		params: {'LAYERS': 'Plan_Sierra', 'SRS': "EPSG:32619" }
 	})
 })		
+
+territorio_operativo = new ol.layer.Image({
+	id: 'territorio_operativo',
+	name:'Territorio Operativo ',
+	opacity :'100',
 	
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=territorio operativo',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'territorio operativo', 
+			'SRS': "EPSG:32619" }
+	})
+})		
+
+oficinas = new ol.layer.Image({
+	id: 'oficnias',
+	name:'oficinas',
+opacity :'100',
+	
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=oficinas',
+	source: new ol.source.ImageWMS({
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+	crossorigin: 'anonymous',
+		params: {'LAYERS': 'oficinas', 'SRS': "EPSG:32619" }
+})
+})	
 
 	
 
 rios_principales = new ol.layer.Image({
 	id: 'Rios_principales',
-	name:'Rios_principales',
+	name:'Rios Principales',
 	opacity :'1',
 	
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Rios_principales',
@@ -1487,7 +1513,7 @@ rios_principales = new ol.layer.Image({
 		
 rios = new ol.layer.Image({
 	id: 'Rios',
-	name:'Rios',
+	name:'Rios y Arrollos',
 	opacity :'1',
 	visible: false,
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Rios',
@@ -1500,7 +1526,7 @@ rios = new ol.layer.Image({
 		
 cuencas_plan_sierra = new ol.layer.Image({
 	id: 'Cuencas',
-	name:'Cuencas',
+	name:'SubCuencas',
 	opacity :'0.8',
 	visible: true,
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Cuencas_plan_sierra',
@@ -1748,28 +1774,28 @@ google_carto = new ol.layer.Tile({
 	
 	groupCapas20 = new ol.layer.Group({
 		id: 'Cartografia  base externa',
-		name: 'Cartografía base externa',
+		name: 'Cartografía Base',
 		layers: [groupCapas2,groupCapas3,groupCapas4]
 	});
 	layers.push(groupCapas20);
 	
 	
-	groupCapas1 = new ol.layer.Group({
+	groupCapasmdt = new ol.layer.Group({
 		id: 'MDT',
-		name: 'MDT',
-		layers: [mdt_pendiente, mdt_srtm,mdt_srtm_sombreado]
+		name: 'Modelo Digital de Terreno',
+		layers: [mdt_pendiente,mdt_srtm_sombreado]
 	});
-	layers.push(groupCapas1);
+	
 	
 
 	
-	groupCapas30 = new ol.layer.Group({
+	/*groupCapas30 = new ol.layer.Group({
 		id: 'Varios',
 		name: 'Varios',
-		layers: [ plan_sierra, osm_viario, rios_principales, rios,  embalses_general, cuencas_plan_sierra,ips]
+		layers: [oficinas, osm_viario,ips]
 	});
 	
-	layers.push(groupCapas30);
+	layers.push(groupCapas30);*/
 	
 	groupCapas100 = new ol.layer.Group({
 		id: 'Actividad',
@@ -1782,31 +1808,101 @@ google_carto = new ol.layer.Tile({
 	
 	
 	
-	
+	groupCapasC = new ol.layer.Group({
+		id: 'Acueductos',
+		name: 'Acueductos',
+		layers: []
+		/*Estanques,Acueductos*/
+	});
+	groupCapasE = new ol.layer.Group({
+		id: 'Estanques',
+		name: 'Estanques',
+		layers: []
+		/*Estanques,Acueductos*/
+	});
 	
 	groupCapas41 = new ol.layer.Group({
 		id: 'Construcciones',
 		name: 'Construcciones',
-		layers: [ sistema_de_riego,reservorio ,lagunas]
+		layers: [ groupCapasE,groupCapasC,sistema_de_riego,reservorio ,lagunas]
+		/*Estanques,Acueductos*/
 	});
+	groupCapasS = new ol.layer.Group({
+		id: 'SF',
+		name: 'Sistemas Familiares',
+		layers: []
+		/*Estanques,Acueductos*/
+	});
+
+	groupCapasV = new ol.layer.Group({
+		id: 'VI',
+		name: 'Viveros',
+		layers: []
+		/*Estanques,Acueductos*/
+	});
+	
+	
+	groupCapas85 = new ol.layer.Group({
+		id: 'Ganadería',
+		name: 'Silvopastoril',
+		layers: [ productor_ganadero_seleccionado,productores_ganaderos]
+	});
+	
 	
 	
 	groupCapas40 = new ol.layer.Group({
-		id: 'Ganadería',
-		name: 'Ganadería',
-		layers: [ groupCapas41, centro_de_acopio,productor_ganadero_seleccionado, productores_ganaderos]
+		id: 'Asocioaciones',
+		name: 'Asocioaciones',
+		layers: [ productores_ganaderos]
 	});
 	
 	layers.push(groupCapas40);
+
+
 	groupCapas = new ol.layer.Group({
 		id: 'Plantaciones',
-		name: 'Plantaciones',
-		layers: [municipio_selected, arg_cuencas, parcelas, plantaciones_cuencas_selected, groupCapas100]
+		name: 'Reforestacion',
+		layers: [municipio_selected, arg_cuencas, plantaciones_cuencas_selected, groupCapas100]
+	});
+	
+	layers.push(groupCapas);
+	groupCapas = new ol.layer.Group({
+		id: 'otros',
+		name: 'Otros Programas',
+		layers: [groupCapasS,groupCapasV,groupCapas85,groupCapas41]
+		/* NDVI,Climaticas,Hidrometricas*/
+	});
+	
+	layers.push(groupCapas);
+	groupCapas = new ol.layer.Group({
+		id: 'monitoreo',
+		name: 'Monitoreo',
+		layers: [ips]
+		/* NDVI,Climaticas,Hidrometricas*/
 	});
 	
 	layers.push(groupCapas);
 	
 	
+	
+	groupCapas300 = new ol.layer.Group({
+		id: 'Administrativo ',
+		name: 'Administrativo ',
+		layers: [plan_sierra,municipio_selected,arg_cuencas,cuencas_plan_sierra,oficinas,territorio_operativo]
+	});
+	
+	layers.push(groupCapas300);
+	
+	
+	
+	groupCapas = new ol.layer.Group({
+		id: 'hidri ',
+		name: 'Hidrografia',
+		layers: [groupCapasmdt ,rios,rios_principales,embalses_general]
+	});
+	
+	layers.push(groupCapas);
+	/*peninete,curbas*/ /*agregar*/ 
 	
 	
 	//COMPETENCIA
@@ -1922,7 +2018,7 @@ google_carto = new ol.layer.Tile({
 	
 	//NNOMBRE DE LA LEYENDA
 	
-	map.getLayerGroup().set('name', 'CAPAS DE INFORMACIÓN');
+	map.getLayerGroup().set('name', 'CAPAS DE INFORMACIÓN ');
 	
 	
 	
