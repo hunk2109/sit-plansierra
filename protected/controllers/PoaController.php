@@ -185,7 +185,7 @@ class PoaController extends Controller
 	
 	
 	
-	function actionGetActividad(){
+	function actionGetActividad1(){
 		//quitar el -1 de ((extract (year from current_date))-1) una vez engamos datos reales
 		$mbd = new PDO('pgsql:host=localhost;port=5432;dbname=jbsoft', 'postgres', 'postgres');
 		$rs = array();

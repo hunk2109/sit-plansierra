@@ -1313,12 +1313,7 @@ google_carto = new ol.layer.Tile({
 //
 //DEFINE ARBOLES DE LA LEYENDA//
 //***********************
-	groupCapas21 = new ol.layer.Group({
-		id: 'Plan Sierra',
-		name: 'Plan Sierra',
-		layers: [plan_sierra]
-	});
-	//layers.push(groupCapas21);
+	
 	
 	
 	groupCapas2 = new ol.layer.Group({
@@ -1400,6 +1395,13 @@ google_carto = new ol.layer.Tile({
 	});
 	
 	layers.push(groupCapas40);
+
+	groupCapas21 = new ol.layer.Group({
+		id: 'Plan Sierra',
+		name: 'Plan Sierra',
+		layers: [plan_sierra]
+	});
+	layers.push(groupCapas21);
 	
 	
 	

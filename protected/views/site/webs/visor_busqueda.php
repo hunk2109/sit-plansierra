@@ -1180,14 +1180,14 @@ var myExtent = [xmin,ymin,xmax,ymax];
 	//*********************************
 	 municipio_selected = new ol.layer.Image({
 		//extent: extent,
-		id: 'Unidad administrativa',
+		id: 'municipio_selected',
 		name: "Unidad Administrativa",
 			opacity :'0.4',
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/unidad_administrativa.map&municipio=0&provincia=0&distrito=0&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=MUNICIPIO_SELECTED2',
 		source: new ol.source.ImageWMS({
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/unidad_administrativa.map&municipio=0&provincia=0&distrito=0',
 		crossorigin: 'anonymous',
-			params: {'LAYERS': 'MUNICIPIO_SELECTED2', 'SRS': "EPSG:3857" }
+			params: {'LAYERS': 'MUNICIPIO_SELECTED', 'SRS': "EPSG:3857" }
 		})
 	})
 	
@@ -1472,12 +1472,26 @@ territorio_operativo = new ol.layer.Image({
 	id: 'territorio_operativo',
 	name:'Territorio Operativo ',
 	opacity :'100',
-	
+	visible: false,
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=territorio operativo',
 	source: new ol.source.ImageWMS({
 		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
 		crossorigin: 'anonymous',
 		params: {'LAYERS': 'territorio operativo', 
+			'SRS': "EPSG:32619" }
+	})
+})		
+
+Parques_Nacionales = new ol.layer.Image({
+	id: 'Parques_Nacionales',
+	name:'Parques Nacionales',
+	opacity :'100',
+	visible: true,
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Plan_Sierra',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'Parques Nacionales', 
 			'SRS': "EPSG:32619" }
 	})
 })		
@@ -1495,7 +1509,61 @@ opacity :'100',
 })
 })	
 
+acueductos = new ol.layer.Image({
+	id: 'acueductos',
+	name:'Acueductos ',
+	opacity :'100',
+	visible: false,
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Lagunas',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'acueductos', 
+			'SRS': "EPSG:32619" }
+	})
+})		
 	
+viveros = new ol.layer.Image({
+	id: 'VI',
+	name:'viveros',
+	opacity :'100',
+	visible: false,
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=oficinas',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'viveros', 
+			'SRS': "EPSG:32619" }
+	})
+})	
+	
+climaticas = new ol.layer.Image({
+	id: 'climaticas',
+	name:'Estaciones climaticas',
+	opacity :'100',
+	visible: false,
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=oficinas',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'climaticas', 
+			'SRS': "EPSG:32619" }
+	})
+})		
+
+Hidrometricas = new ol.layer.Image({
+	id: 'Hidrometricas',
+	name:'Estaciones Hidrometricas',
+	opacity :'100',
+	visible: false,
+	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=oficinas',
+	source: new ol.source.ImageWMS({
+		url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map',
+		crossorigin: 'anonymous',
+		params: {'LAYERS': 'Hidrometricas', 
+			'SRS': "EPSG:32619" }
+	})
+})		
 
 rios_principales = new ol.layer.Image({
 	id: 'Rios_principales',
@@ -1527,7 +1595,7 @@ rios = new ol.layer.Image({
 cuencas_plan_sierra = new ol.layer.Image({
 	id: 'Cuencas',
 	name:'SubCuencas',
-	opacity :'0.8',
+	opacity :'0.25',
 	visible: true,
 	url: 'http://sit.plansierra.org:81/cgi-bin/mapserv.exe?MAP=c:\\datos/sierra/Basetopografica.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&SLD_VERSION=1.1.0&LAYER=Cuencas_plan_sierra',
 	source: new ol.source.ImageWMS({
@@ -1565,7 +1633,7 @@ productor_ganadero_seleccionado = new ol.layer.Image({
 		crossorigin: 'anonymous',
 		params: {'LAYERS': 'Productor_ganadero_seleccionado', 'SRS': "EPSG:32619" }
 	})
-})	
+})
 
 productores_ganaderos = new ol.layer.Image({
 	id: 'Ganaderos',
@@ -1749,7 +1817,7 @@ google_carto = new ol.layer.Tile({
 	groupCapas2 = new ol.layer.Group({
 		id: 'OSM',
 		name: 'OSM',
-		visible: false,
+		visible: true,
 		layers: [osm]
 	});
 	//layers.push(groupCapas2);
@@ -1767,7 +1835,7 @@ google_carto = new ol.layer.Tile({
 	groupCapas4 = new ol.layer.Group({
 		id: 'Cartografía Google',
 		name: 'Cartografía Google',
-		visible: true,
+		visible: false,
 		layers: [google_carto]
 	});
 	//layers.push(groupCapas4);
@@ -1786,6 +1854,12 @@ google_carto = new ol.layer.Tile({
 		layers: [mdt_pendiente,mdt_srtm_sombreado]
 	});
 	
+	groupCapascuenc = new ol.layer.Group({
+		id: 'cuenc',
+		name: 'Cuencas',
+		layers: [cuencas_plan_sierra,arg_cuencas]
+	});
+	
 	
 
 	
@@ -1802,16 +1876,16 @@ google_carto = new ol.layer.Tile({
 		name: 'Actividad',
 		layers: [plantaciones_puntos_5, plantaciones_puntos_4, plantaciones_puntos_3, plantaciones_puntos_2,plantaciones_puntos]
 	});
-	//layers.push(groupCapas100);	
+	layers.push(groupCapas100);	
 	
 	
 	
 	
 	
 	groupCapasC = new ol.layer.Group({
-		id: 'Acueductos',
+		id: 'acueductos',
 		name: 'Acueductos',
-		layers: []
+		layers: [acueductos]
 		/*Estanques,Acueductos*/
 	});
 	groupCapasE = new ol.layer.Group({
@@ -1837,7 +1911,7 @@ google_carto = new ol.layer.Tile({
 	groupCapasV = new ol.layer.Group({
 		id: 'VI',
 		name: 'Viveros',
-		layers: []
+		layers: [viveros]
 		/*Estanques,Acueductos*/
 	});
 	
@@ -1877,18 +1951,32 @@ google_carto = new ol.layer.Tile({
 	groupCapas = new ol.layer.Group({
 		id: 'monitoreo',
 		name: 'Monitoreo',
-		layers: [ips]
+		layers: [ips,Hidrometricas,climaticas]
 		/* NDVI,Climaticas,Hidrometricas*/
 	});
 	
+	
+	
+	groupCapasCli = new ol.layer.Group({
+		id: 'climaticas',
+		name: 'climaticas',
+		layers: [climaticas]
+		
+	});
 	layers.push(groupCapas);
 	
+	groupCapasCli = new ol.layer.Group({
+		id: 'Hidrometricas',
+		name: 'Hidrometricas',
+		layers: [Hidrometricas]
+		
+	});
 	
 	
 	groupCapas300 = new ol.layer.Group({
 		id: 'Administrativo ',
 		name: 'Administrativo ',
-		layers: [plan_sierra,municipio_selected,arg_cuencas,cuencas_plan_sierra,oficinas,territorio_operativo]
+		layers: [plan_sierra,municipio_selected,territorio_operativo,oficinas,Parques_Nacionales]
 	});
 	
 	layers.push(groupCapas300);
@@ -1898,7 +1986,7 @@ google_carto = new ol.layer.Tile({
 	groupCapas = new ol.layer.Group({
 		id: 'hidri ',
 		name: 'Hidrografia',
-		layers: [groupCapasmdt ,rios,rios_principales,embalses_general]
+		layers: [groupCapasmdt,groupCapascuenc,rios,rios_principales,embalses_general]
 	});
 	
 	layers.push(groupCapas);
@@ -2001,7 +2089,7 @@ google_carto = new ol.layer.Tile({
 		view: new ol.View({
 		  //projection: projection,419322, 4941215
 		  center: [-7925000, 2200000],
-		  zoom: 11
+		  zoom: 10
 		})
 	});
 	

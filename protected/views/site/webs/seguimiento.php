@@ -1004,7 +1004,7 @@ $.get('index.php?r=PoaGanaderia/GetTotalCategorias', function (data100){
  //alert ('GetPS');
  
 	$('#graficoS100').highcharts({
-	colors: ['#ff000099','#bb000099', '#99000066', '#990033', '#990099','#9900ff', '#999900', '#996600','#993300', '#993333'],
+	colors: ['#ff000099','#bb00009', '#99000066', '#990033', '#990099','#9900ff', '#999900', '#996600','#993300', '#993333'],
    
   chart: {
     plotBackgroundColor: null,
@@ -1860,13 +1860,13 @@ $('#grafico90').highcharts({
         enabled: false
     },
     series: [{
-        name: 'Ejecutadas',
+        name: 'Ejecutadas1',
         data: serie1,
-		color: '#ff000099'
+		color: '#008000'
     }, {
         name: 'Previstas',
         data: serie2,
-		color: '#aa003399'
+		color: '#008000'
     }]
 		});
 		
@@ -2693,7 +2693,7 @@ $('#grafico290').highcharts({
     }, {
         name: 'Previstas',
         data: serie2,
-		color: '#aa003399'
+		color: '#aa0033'
     }]
 		});
 		
@@ -3567,7 +3567,7 @@ $('#grafico291').highcharts({
         categories: categorias,
 		 labels:{
 			 style:{
-				 color: '#000000',
+				 color: '#0000ff99',
 				 fontSize: '12px'
 			 },
 		 },
